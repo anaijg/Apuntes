@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ana">
+    <meta name="description" content="Índice de contenidos. Presentación del sitio">
+    <title>Lenguajes de marcas</title>
+</head>
+<body>
+    Lenguajes de marcas
+
+Los lenguajes de marcas sirven para codificar documentos. La codificación se realiza incorporando etiquetas o marcas que
+tienen información adicional acerca de la estructura del texto.
+Las marcas son códigos que indican a un programa cómo debe tratar su contenido; si se desea que un texto aparezca con un
+determinado formato, dicho texto debe ir delimitado por la correspondiente marca que indique cómo debe ser mostrado.
+El lenguaje de marcas más popular es el HTML, siglas de HyperText Markup Language (Lenguaje para el Formato de
+Documentos de Hipertexto), el lenguaje usado por la World Wide Web. Otros ejemplos de lenguajes de marcas son XHTML
+(Extensible HyperText Markup Language), RSS 2.0 (Really Simple Syndication), RTF (Rich
+Text Format), etc.
+HTML es el lenguaje utilizado para construir páginas web. Su versión actual es HTML5.
+Mediante una estructura se crea contenido en forma de texto; asimismo, se puede
+incorporar otro tipo de elementos a ese contenido, como imágenes, sonidos...
+HTML se escribe mediante «etiquetas» rodeadas entre los signos de menor que y
+mayor que (<,>) y algunas tienen atributos que pueden tomar algún valor. La mayoría
+de las etiquetas deben cerrarse de igual modo que se abren. Para cerrar una etiqueta
+se utilizan los signos de mayor que y menor que y la barra(</,>).
+Por ejemplo, si tenemos la etiqueta <html> que indica el inicio de un documento
+HTML, el cierre será </html>.
+Por convención, los archivos de formato HTML utilizan la extensión .htm o .html. La
+extensión de un archivo es una cadena de caracteres que va unida al nombre de un
+archivo y precedida por un punto y cuya función principal es diferenciar el contenido
+del archivo de modo que el sistema operativo disponga del procedimiento necesario
+para ejecutarlo o interpretarlo.
+Para crear páginas web con HTML es necesario un editor de textos básico, como puede
+ser el bloc de notas de Windows o cualquier otro editor que admita texto sin formato,
+como por ejemplo GNU Emacs, Microsoft Wordpad, TextPad, Vim, etc.
+Como hemos dicho anteriormente, HTML se escribe en forma de etiquetas.
+Las etiquetas que describen la estructura general de un documento son tres:
+• <html>: limita el documento e indica que se encuentra escrito en este lenguaje;
+señala el inicio y el final del documento.
+• <head>: cabecera del documento, especifica el prólogo del resto del archivo.
+Define la cabecera del documento HTML, suele contener información sobre el
+documento y no se muestra al usuario. Indica el título y permite aportar
+metainformación1
+
+al documento, para su mejor identificación e indexación por
+
+los motores de búsqueda.
+• <body>: encierra el contenido del documento. Define el contenido principal o
+cuerpo del documento. Esta es la parte del documento HTML que se muestra en
+el navegador; dentro de esta etiqueta pueden definirse propiedades comunes a
+toda la página, como color de fondo, del texto y márgenes de la página web, el
+color de los enlaces visitados...
+
+EJEMPLO
+¿Cómo crear una página web con un editor de textos básico?
+1. Abrimos un editor de textos básico, por ejemplo el bloc de notas de Windows
+Vista (INICIO > PROGRAMAS > ACCESORIOS > BLOC DE NOTAS) y escribimos
+el siguiente código:
+<html>
+<!— Mi primer ejemplo —>
+<head>
+<title>Mi primera página</title>
+</head>
+<body>
+<p>Mi primera página</p>
+</body>
+2. Guardamos con extensión .html, el tipo de documento es: TODOS LOS
+ARCHIVOS (*.*).
+3. Abrimos con un navegador.
+Etiquetas básicas
+Estas etiquetas son generales y aparecen en cualquier documento HTML.
+ETIQUETA FUNCIÓN
+<!DOCTYPE> Define el tipo de documento
+<html>,</html> Define el inicio y el final de un documento HTML
+<head>,</head> Define información sobre el documento
+<body>,</body> Define el cuerpo del documento
+<!— Comentario –> Define un comentario
+
+Etiquetas del head
+Son las etiquetas que describen la cabecera del documento. El uso de estas etiquetas
+es transparente al usuario; sirven para poner el título de la página y la metainformación:
+la descripción, keywords, autor, hoja de estilos...
+ETIQUETA FUNCIÓN
+<title>,</title> Define el título del documento
+<meta charset=” ”> Especifica el juego de caracteres del documento.
+<meta name=”author” content=” “> Define el autor del documento
+<meta name=”description” content=” ”> Define una descripción del documento; la
+descripción se escribe en «content»
+
+<link rel=”stylesheet” href=” “> Define un recurso; por ejemplo, incluir una hoja de
+
+estilo
+
+<script></script> se utiliza para insertar o hacer referencia a un script
+
+ejecutable
+
+Nota: Muchas características <meta> ya no se usan. Por ejemplo, los motores de búsqueda ignoran el
+elemento <meta> (<meta name="keywords" content="pon, tus, palabras clave, aquí">), que se supone
+que facilita palabras clave para motores de búsqueda de forma que se determine la relevancia de esa
+página según diferentes términos de búsqueda, porque los spammers rellenaban la lista de palabras clave
+con cientos de palabras clave que sesgaban los resultados
+Configuración de la ventana gráfica
+HTML5 introdujo un método para permitir que los diseñadores web tomen el control
+de la ventana gráfica, a través de la etiqueta <meta>.
+Debes incluir el siguiente elemento en todas tus páginas web:
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Esto le da al navegador instrucciones sobre cómo controlar las dimensiones y la escala
+de la página. La parte width=device-width establece el ancho de la página para seguir
+
+6
+
+el ancho de la pantalla del dispositivo (que variará según el dispositivo). La parte initial-
+scale=1.0 establece el nivel de zoom inicial cuando el navegador carga la página por
+
+primera vez.
+Etiquetas del body
+Son etiquetas que sirven para mostrar los objetos de la página; por ejemplo, para dar
+formato a un texto, crear listas, tablas, insertar imágenes, sonidos, etc.
+ETIQUETA FUNCIÓN
+<h1> a <h6>, </h1> a </h6> Define encabezados
+<p>, </p> Define un párrafo
+<br> Inserta una línea en blanco
+<hr> Inserta una línea
+<strong>,</strong> Define estilo negrita, con intención semántica
+
+“fuerte”
+
+<b>, </b> Define estilo negrita, sin intención semántica
+<em>, </em> Cursiva, con énfasis
+<i>, </i> Cursiva o itálica, sin intención de enfatizar
+<small>,</small> Define un estilo para el texto, pequeño
+<u>, </u> Define un estilo para el texto, subrayado
+<sub>, </sub> Define un estilo para el texto, subíndice
+<sup>, </sup> Define un estilo para el texto, superíndice
+<blockquote> </blockquote> Crea citas en bloque, marca las citas a otros
+
+autores o documentos
+
+<a>,</a> Hipervínculo o enlace. Por ejemplo:
+
+<a href=”http://www.google.com”>Google</a>
+<img> Imagen. Requiere del atributo src, indica la ruta en
+la que se encuentra la imagen. Por ejemplo:
+<img src=”./imagen/foto.jpg”>
+
+<!-- Lo comento para que deje de salir error
+
+<table>,</table> Define una tabla
+<caption>,</caption> Define el título de una tabla
+<tr>,</tr> Fila de una tabla
+<td>,</td> Celda dentro de una tabla
+<ul>,</ul> Define una lista
+<ol>,</ol> Define una lista ordenada con números
+<li>,</li> Define los elementos de una lista
+<form>,</form> Define un formulario
+<style>,</style> Incluye información de estilo
+</html>
+-->
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ana">
+    <meta name="description" content="Índice de contenidos. Presentación del sitio">
+    <title>Hojas de estilos</title>
+</head>
+<body>
+    Hojas de estilo
+Las hojas de estilo en cascada (Cascading Style Sheets), cuyas
+siglas son CSS, se utilizan para definir la presentación de un
+documento escrito en HTML o XML. Las hojas de estilo
+describen cómo se va a mostrar un documento en pantalla.
+Al crear una página web tenemos que comprobar qué hacen
+los elementos dentro de la página, como por ejemplo
+párrafos, tablas, listas, etc. Este funcionamiento lo
+plasmamos en el documento HTML, mientras que el aspecto
+de cada elemento, como el color, el tamaño y tipo de letra, o
+la posición de los elementos lo podemos hacer en hojas de
+estilo CSS.
+
+<!-- Comento para que no se vean los errores
+El W3C (World Wide Web Consortium) es el encargado de
+formular la especificación de las hojas de estilo que servirán de estándar para los
+navegadores. La idea que se encuentra detrás del desarrollo de las CSS es separar la
+estructura de un documento de su presentación.
+La información sobre los estilos que va a tener la página puede estar incluida en el
+documento HTML (etiqueta <style>) o utilizando una hoja de estilo externa en un
+fichero separado (etiqueta <link>); generalmente se definirá el estilo en el head del
+documento HTML. El lenguaje por defecto de las hojas de estilo es text/css y se indica
+con el parámetro type=”text/css”.
+La sintaxis del estilo se realiza mediante {}. Las hojas de estilo funcionan a base de
+reglas, declaraciones sobre el estilo de uno o más elementos. La regla tiene dos partes:
+un selector y la declaración. Por ejemplo: h1 {color: red}, donde h1 es el selector o
+elemento y {color: red} es la declaración o propiedad. En este caso, el selector h1 le
+indica al navegador la parte del documento que se verá afectada por esa regla. Los
+selectores pueden aparecer individualmente o agrupados por comas.
+Generalmente, la declaración o la propiedad, en este caso el color, indica que va a
+cambiar a rojo. Las propiedades también pueden agruparse, separándolas mediante un
+punto y coma, pero suele ser habitual describir una propiedad por línea.
+En caso de que la propiedad conste de más de una palabra, aparecerá: “ “.
+-->
+
+EJEMPLO
+Crear dos páginas web utilizando hojas de estilo de distinta forma.
+1. Estilo CSS incluido en un documento HTML. El estilo se añade en el propio
+documento HTML mediante la etiqueta dentro del head:
+
+<style type=”text/css”>Etiquetas CSS</style>
+
+Fichero: ejemplo.html
+
+<html>
+<head>
+<style type=”text/css”>
+body { background-color:yellow;}
+</style>
+</head>
+<body>
+<h1>Cabecera ejemplo</h1>
+</body>
+</html>
+
+Resultado:
+
+2. Estilo CSS separadodel documento HTML. El estilo se edita y se guarda en un
+fichero diferente al fichero HTM. Se llama a ese fichero desde el documento
+HTML donde queremos incluir dicho estilo:
+
+<link href=”style.css” rel=”stylesheet” type=”text/css”>
+Las hojas de estilo pueden tener cualquier estructura, aunque es recomendable seguir
+un orden definiendo primero las propiedades generales que afectan a toda la página
+web, y en segundo lugar, crear estilos para cada una de las partes de la página web.
+Como hemos visto, las hojas de estilo están compuestas por partes que llamaremos
+elementos. Dentro de cada elemento se definen propiedades, como por ejemplo
+color de fondo, tipos de letra, bordes, etc.
+En el siguiente código podemos observar el elemento body, en el que definimos
+las propiedades que afectan a todo el body de la página HTML.
+
+body
+{ font-family: Verdana,Arial,sans-serif;
+font-size: 0.2em;
+background-color: #F0F;
+color: #002266;
+}
+
+Este código lo podemos llamar desde el documento HTML o utilizando la etiqueta
+<link>, como se describió en los ejemplos anteriores.
+Las propiedades son las características que están disponibles en las hojas de estilo;
+las más importantes son:
+PROPIEDAD DESCRIPCIÓN EJEMPLO
+background-color Define el color del fondo background-color: #FFF;
+font-family Estilo de letra font-family:
+Verdana,Arial,
+sans-serif;
+font-size Tamaño de letra font-size: 0.8em;
+text-align Alineación del texto text-align: center;
+width Ancho de un elemento width: 700px;
+margin Margen de un elemento margin: 10px auto;
+margin-left Margen izquierdo margin-left: 5px;
+padding Relleno de un elemento padding:10px;
+La lista completa de propiedades la puedes encontrar aquí.
+Además de definir propiedades para elementos HTML, como por ejemplo el body,
+también podemos crear selectores de ID con las propiedades que deseemos.
+EJEMPLO
+Vamos a crear una estructura que llamaremos masthead en la cual centraremos
+un texto:
+
+/* Elemento con id="demo" */
+#demo {
+text-align: center;
+}
+
+La llamada desde el documento HTML se realiza con la etiqueta:
+
+<div id=”demo”> <a href=”index.html”><img alt=”Foto1”
+src=”logo.gif” ></a></div>
+El resultado será que la imagen logo.gif aparecerá centrada en la página.
+Con las hojas de estilo se puede controlar el color, la anchura y los estilos de los bordes
+y, asimismo, se puede definir que los bordes aparezcan o no.
+Algunas ventajas de utilizar CSS son:
+• Sencillez al realizar cambios en la presentación del contenido. Por ejemplo,
+si queremos cambiar el tipo de letra de todo el documento, si utilizamos HTML
+tenemos que ir cambiando una a una las etiquetas que indican el tipo de letra;
+en cambio, si utilizamos hojas de estilo solo tenemos que cambiar la propiedad
+que indique el tipo de letra.
+• Facilidad para dividir el contenido de la página. Cuando se utilizan hojas de
+estilo, el contenido se puede dividir en partes, por ejemplo, cabecera, contenido
+y final; cada una de las partes está delimitada. En HTML es difícil indicar
+divisiones tan marcadas como con las hojas de estilo.
+• Mayor accesibilidad de la Web. En cualquier situación se puede ver el
+contenido de una página web si se utilizan las hojas de estilo, esto significa que
+la Web se hace más accesible gracias a la sencillez en el código.
+ACTIVIDADES
+• Crea una hoja de estilo que contenga los siguientes elementos:
+• Elemento body (propiedades generales del documento):
+– Tipo de letra: Verdana.
+– Tamaño letra: 0.8 em.
+– Fondo: blanco.
+– Color de letra: por defecto azul.
+• Elemento masthead (logo):
+– El logo centrado.
+– Relleno (padding: 5 px).
+</body>
+</html>
